@@ -1,0 +1,19 @@
+{
+  "name": "web-performance-checklist",
+  "version": "0.1.0",
+  "description": "Practical checklists for web performance, Core Web Vitals, accessibility, technical SEO, caching, compatibility, deployment and security, with references to authoritative documentation.",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "lint": "markdownlint-cli2",
+    "check:links": "linkinator \"*.md\" \"docs/*.md\" --markdown --retry --timeout 20000 --concurrency 8",
+    "check": "npm run lint && npm run check:links"
+  },
+  "devDependencies": {
+    "linkinator": "^8.1.0",
+    "markdownlint-cli2": "^0.24.0"
+  },
+  "overrides": {
+    "re2js": "2.8.7"
+  }
+}
